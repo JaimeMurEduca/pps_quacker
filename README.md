@@ -10,15 +10,14 @@ Actualmente sin mantenimiento debido al éxito de la competencia. Si quieres hac
 ## Instrucciones de uso
 Aplicación desarrollada en Python (v3.11) con Flask y Mongo como dependencias principales. Levanta primero un servidor de Mongo en local.
 
+
 Para desplegar los contenedores tendras que realizar los siguientes comandos:
 
     docker build -t quacker .
 
     docker network create quacker-mongo
 
-    docker run -d --network quacker-mongo -p 27017:27017 contenedor_mongo
-
-    docker run -d --network quacker-mongo -p 5000:5000 quacker
+    docker compose up
 
 
 Desplegará un servidor web en [http://127.0.0.1:5000](http://127.0.0.1:5000)

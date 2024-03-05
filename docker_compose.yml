@@ -1,0 +1,21 @@
+services:
+  quacker:
+    image: quacker
+    environment:
+      - MONGO_IP=contenedor_mongo
+      - MONGO_PORT=27017
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo    
+    container_name: contenedor_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
