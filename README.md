@@ -10,6 +10,22 @@ Actualmente sin mantenimiento debido al éxito de la competencia. Si quieres hac
 ## Instrucciones de uso
 Aplicación desarrollada en Python (v3.11) con Flask como dependencia principal.
 
+Para desplegar un entorno aislado realizaremos los siguientes pasos:
+
+  - Crear el entorno si no lo tenemos:
+
+    python3 -m venv pps_venv_01 
+
+  - Lo activamos:
+
+    source pps_venv_01/bin/activate
+
+  - Importamos las dependencias:
+
+    pip install -r requirements * 
+
+Para desplegar la aplicación:
+
     python app.py
 
 Desplegará un servidor web en [http://127.0.0.1:5000](http://127.0.0.1:5000)
